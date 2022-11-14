@@ -258,7 +258,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0g-8D-KzR">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0g-8D-KzR">
                                                     <rect key="frame" x="16" y="14.5" width="46.5" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -274,7 +274,7 @@
                                             <constraints>
                                                 <constraint firstItem="s0g-8D-KzR" firstAttribute="leading" secondItem="ea4-fT-ZBC" secondAttribute="leadingMargin" id="17N-7k-eFW"/>
                                                 <constraint firstItem="s0g-8D-KzR" firstAttribute="centerY" secondItem="ea4-fT-ZBC" secondAttribute="centerY" id="BUV-aJ-DLj"/>
-                                                <constraint firstItem="L8w-iQ-99i" firstAttribute="leading" secondItem="s0g-8D-KzR" secondAttribute="trailing" constant="263.5" id="G3e-nC-sGl"/>
+                                                <constraint firstItem="L8w-iQ-99i" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s0g-8D-KzR" secondAttribute="trailing" constant="8" id="G3e-nC-sGl"/>
                                                 <constraint firstItem="L8w-iQ-99i" firstAttribute="centerY" secondItem="ea4-fT-ZBC" secondAttribute="centerY" id="Iyf-C6-YUJ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="L8w-iQ-99i" secondAttribute="trailing" id="NUa-zE-6fj"/>
                                             </constraints>
@@ -324,6 +324,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addressLabel" destination="L8w-iQ-99i" id="1Iq-zE-KtC"/>
+                        <outlet property="categoryLabel" destination="Mda-CF-mwo" id="FjQ-JF-45o"/>
+                        <outlet property="dateLabel" destination="Nw1-7p-RUY" id="zeI-oo-Tc2"/>
+                        <outlet property="descriptionTextView" destination="xlf-Ed-nY8" id="rbQ-LO-hrr"/>
+                        <outlet property="latitudeLabel" destination="zuZ-E2-4yY" id="uDz-xh-6tk"/>
+                        <outlet property="longitudeLabel" destination="lSu-4N-ef8" id="A8a-uS-8vN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Is-6v-D9D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
