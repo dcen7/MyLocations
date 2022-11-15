@@ -20,6 +20,11 @@ class HudView: UIView {
         return hudView
     }
     
+    func hide() {
+        superview?.isUserInteractionEnabled = true
+        removeFromSuperview()
+    }
+    
     override func draw(_ rect: CGRect) {
         let boxWidth: CGFloat = 96
         let boxHeight: CGFloat = 96
@@ -32,8 +37,6 @@ class HudView: UIView {
         // Draw checkmark
         if let image = UIImage(named: "Checkmark") {
             let imagePoint = CGPoint(x: center.x - round(image.size.width / 2), y: center.y - round(image.size.height / 2) - boxHeight / 8)
-            print(center.x)
-            print(image.size.height)
             image.draw(at: imagePoint)
         }
         
