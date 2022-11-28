@@ -29,12 +29,13 @@ class LocationDetailsViewController: UITableViewController {
     @IBOutlet var imageHeight: NSLayoutConstraint!
     
     var image: UIImage?
-    
     var managedObjectContext: NSManagedObjectContext!
-    
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var placemark: CLPlacemark?
     var date = Date()
+    var descriptionText = ""
+    var categoryName = "No Category"
+    var observer: Any!
     
     var locationToEdit: Location? {
         didSet {
@@ -47,9 +48,6 @@ class LocationDetailsViewController: UITableViewController {
             }
         }
     }
-    var descriptionText = ""
-    
-    var categoryName = "No Category"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +72,12 @@ class LocationDetailsViewController: UITableViewController {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         gestureRecognizer.cancelsTouchesInView = false
         tableView.addGestureRecognizer(gestureRecognizer)
+        listenForBackgroundNotification()
+    }
+    
+    deinit {
+        print("*** deinit \(self)")
+        NotificationCenter.default.removeObserver(observer!)
     }
     //MARK: - Actions
     @IBAction func done() {
@@ -128,6 +132,17 @@ class LocationDetailsViewController: UITableViewController {
         addPhotoLabel.text = ""
         imageHeight.constant = 260
         tableView.reloadData()
+    }
+    
+    func listenForBackgroundNotification() {
+        observer = NotificationCenter.default.addObserver(forName: UIScene.didEnterBackgroundNotification, object: nil, queue: OperationQueue.main) { [weak self] _ in
+            if let weakSelf = self {
+                if weakSelf.presentedViewController != nil {
+                    weakSelf.dismiss(animated: false, completion: nil)
+                }
+                weakSelf.descriptionTextView.resignFirstResponder()
+            }
+        }
     }
     
     @IBAction func categoryPickerDidPickCategory(_ segue: UIStoryboardSegue) {
