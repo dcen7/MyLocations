@@ -24,6 +24,11 @@ class LocationDetailsViewController: UITableViewController {
     @IBOutlet var longitudeLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var addPhotoLabel: UILabel!
+    @IBOutlet var imageHeight: NSLayoutConstraint!
+    
+    var image: UIImage?
     
     var managedObjectContext: NSManagedObjectContext!
     
@@ -51,7 +56,7 @@ class LocationDetailsViewController: UITableViewController {
         if let location = locationToEdit {
             title = "Edit Location"
         }
-        
+    
         descriptionTextView.text = descriptionText
         categoryLabel.text  = categoryName
         
@@ -115,6 +120,14 @@ class LocationDetailsViewController: UITableViewController {
             return
         }
         descriptionTextView.resignFirstResponder()
+    }
+    
+    func show(image: UIImage) {
+        imageView.image = image
+        imageView.isHidden = false
+        addPhotoLabel.text = ""
+        imageHeight.constant = 260
+        tableView.reloadData()
     }
     
     @IBAction func categoryPickerDidPickCategory(_ segue: UIStoryboardSegue) {
@@ -221,6 +234,10 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate, UINavi
     
     // MARK: - Image Picker Delegates
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]){
+        image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+        if let theImage = image {
+            show(image: theImage)
+        }
         dismiss(animated: true, completion: nil)
         
     }
