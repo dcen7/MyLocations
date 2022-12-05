@@ -17,6 +17,8 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var tagButton: UIButton!
     @IBOutlet weak var getButton: UIButton!
+    @IBOutlet weak var latitudeTextLabel: UILabel!
+    @IBOutlet weak var longitudeTextLabel: UILabel!
     
     var managedObjectContext: NSManagedObjectContext!
     
@@ -70,6 +72,9 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
             longitudeLabel.text = String(format: "%.8f", location.coordinate.longitude)
             tagButton.isHidden = false
             messageLabel.text = ""
+            
+            latitudeTextLabel.isHidden = false
+            longitudeTextLabel.isHidden = false
         } else {
             latitudeLabel.text = ""
             longitudeLabel.text = ""
@@ -91,32 +96,23 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
                 statusMessage = "Tap 'Get My Location' to Start"
             }
             messageLabel.text = statusMessage
+            
+            latitudeTextLabel.isHidden = true
+            longitudeTextLabel.isHidden = true
         }
         configureGetButton()
     }
     
     func string(from placemark: CLPlacemark) -> String {
         var line1 = ""
-        if let tmp = placemark.subThoroughfare {
-            line1 += tmp + " "
-        }
-        if let tmp = placemark.thoroughfare {
-            line1 += tmp
-        }
+        line1.add(text: placemark.subThoroughfare)
+        line1.add(text: placemark.thoroughfare, separatedBy: " ")
         var line2 = ""
-        if let tmp = placemark.locality {
-            line2 += tmp + " "
-        }
-        
-        if let tmp = placemark.administrativeArea {
-            line2 += tmp + " "
-        }
-        
-        if let tmp = placemark.postalCode {
-            line2 += tmp
-        }
-        
-        return line1 + "\n" + line2
+        line2.add(text: placemark.locality)
+        line2.add(text: placemark.administrativeArea, separatedBy: " ")
+        line2.add(text: placemark.postalCode, separatedBy: " ")
+        line1.add(text: line2, separatedBy: "\n")
+        return line1
     }
     
     @objc func didTimeOut() {

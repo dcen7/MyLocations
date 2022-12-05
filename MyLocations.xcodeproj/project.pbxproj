@@ -17,6 +17,7 @@
 		FB16BE6429267498002B3B3F /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16BE6329267498002B3B3F /* LocationCell.swift */; };
 		FB16BE66292BFBB6002B3B3F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16BE65292BFBB6002B3B3F /* MapViewController.swift */; };
 		FB16BE6829379572002B3B3F /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16BE6729379572002B3B3F /* UIImage+Resize.swift */; };
+		FB16BE6A2938E1DF002B3B3F /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16BE692938E1DF002B3B3F /* String+AddText.swift */; };
 		FBB1312729140E1000D54C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB1312629140E1000D54C03 /* AppDelegate.swift */; };
 		FBB1312929140E1000D54C03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB1312829140E1000D54C03 /* SceneDelegate.swift */; };
 		FBB1312B29140E1000D54C03 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB1312A29140E1000D54C03 /* CurrentLocationViewController.swift */; };
@@ -37,6 +38,7 @@
 		FB16BE6329267498002B3B3F /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		FB16BE65292BFBB6002B3B3F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FB16BE6729379572002B3B3F /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		FB16BE692938E1DF002B3B3F /* String+AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
 		FBB1312329140E1000D54C03 /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB1312629140E1000D54C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBB1312829140E1000D54C03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				FB16BE5B2923F348002B3B3F /* Functions.swift */,
 				FB16BE6329267498002B3B3F /* LocationCell.swift */,
 				FB16BE6729379572002B3B3F /* UIImage+Resize.swift */,
+				FB16BE692938E1DF002B3B3F /* String+AddText.swift */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				FBB1313129140E1000D54C03 /* MyLocations.xcdatamodeld in Sources */,
 				FBB1312929140E1000D54C03 /* SceneDelegate.swift in Sources */,
 				FB16BE5F292515D9002B3B3F /* Location+CoreDataClass.swift in Sources */,
+				FB16BE6A2938E1DF002B3B3F /* String+AddText.swift in Sources */,
 				FB16BE5A2922DFA8002B3B3F /* HudView.swift in Sources */,
 				FB16BE56291BE720002B3B3F /* LocationDetailsViewController.swift in Sources */,
 			);
@@ -344,6 +348,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,6 +382,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

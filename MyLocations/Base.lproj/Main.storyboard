@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q97-iu-6H1">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,14 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCx-ND-Kf5">
-                                <rect key="frame" x="16" y="563" width="343" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Get My Location"/>
+                                <rect key="frame" x="16" y="558" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Get My Location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="getLocation" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7H-cu-ndO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Message Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cX-lm-cpQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Message Label)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cX-lm-cpQ">
                                 <rect key="frame" x="16" y="60" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -37,14 +40,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Latitude goes here)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkL-hj-PSH">
-                                <rect key="frame" x="204.5" y="105" width="154.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="193.5" y="105" width="165.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Longitude goes here)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAP-qd-avu">
-                                <rect key="frame" x="190.5" y="150" width="168.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="179" y="150" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -64,9 +67,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdW-px-0wE">
-                                <rect key="frame" x="16" y="269" width="343" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Tag Location"/>
+                                <rect key="frame" x="16" y="269" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Tag Location"/>
                                 <connections>
                                     <segue destination="kRs-IW-Gpl" kind="show" identifier="TagLocation" id="RMq-Zx-Xq2"/>
                                 </connections>
@@ -108,7 +112,9 @@
                         <outlet property="addressLabel" destination="4PJ-Mi-5Fd" id="S43-4w-DLT"/>
                         <outlet property="getButton" destination="QCx-ND-Kf5" id="fNa-Fn-H1E"/>
                         <outlet property="latitudeLabel" destination="xkL-hj-PSH" id="lIH-nu-YCH"/>
+                        <outlet property="latitudeTextLabel" destination="T2D-Cz-F5i" id="sOY-Py-lCA"/>
                         <outlet property="longitudeLabel" destination="zAP-qd-avu" id="owe-SU-Ucp"/>
+                        <outlet property="longitudeTextLabel" destination="Xat-2Y-fri" id="TbY-df-gIW"/>
                         <outlet property="messageLabel" destination="2cX-lm-cpQ" id="Oe2-SC-YEN"/>
                         <outlet property="tagButton" destination="gdW-px-0wE" id="C1J-zD-wdy"/>
                     </connections>
@@ -169,8 +175,8 @@
                                                     <rect key="frame" x="309.5" y="15" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" white="1" alpha="0.60077712709540565" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.60077712709540565" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -234,8 +240,8 @@
                                                     <rect key="frame" x="326" y="15" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" white="1" alpha="0.60077712709540565" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.60077712709540565" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -258,8 +264,8 @@
                                                     <rect key="frame" x="326" y="15" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" white="1" alpha="0.60077712709540565" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.60077712709540565" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -280,8 +286,8 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8w-iQ-99i">
                                                     <rect key="frame" x="326" y="14.5" width="33" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" white="1" alpha="0.60077712709540565" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.60077712709540565" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -311,8 +317,8 @@
                                                     <rect key="frame" x="326" y="15" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" white="1" alpha="0.60077712709540565" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.60077712709540565" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -420,8 +426,8 @@
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVK-9e-HMD">
                                             <rect key="frame" x="76" y="37" width="283" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
+                                            <color key="textColor" white="1" alpha="0.60323308477338577" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="highlightedColor" white="1" alpha="0.60441377147144038" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0U3-jj-TkN">
                                             <rect key="frame" x="16" y="6" width="52" height="52"/>
@@ -487,12 +493,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="2te-eB-wJE">
-                        <barButtonItem key="leftBarButtonItem" title="Locations" id="aYK-Q2-C9q">
+                        <barButtonItem key="leftBarButtonItem" title="Locations" image="Pin" id="aYK-Q2-C9q">
                             <connections>
                                 <action selector="showLocations" destination="dsT-ud-YIZ" id="j3C-Jq-K4r"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="User" id="sFr-Hf-fLr">
+                        <barButtonItem key="rightBarButtonItem" title="User" image="User" id="sFr-Hf-fLr">
                             <connections>
                                 <action selector="showUser" destination="dsT-ud-YIZ" id="qD9-cP-SBA"/>
                             </connections>
@@ -511,7 +517,7 @@
         <scene sceneID="7U9-3D-Kil">
             <objects>
                 <navigationController id="0YA-TX-Rjw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Locations" id="wXI-P2-9Kj"/>
+                    <tabBarItem key="tabBarItem" title="Locations" image="Locations" id="wXI-P2-9Kj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iEf-bJ-gO8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -548,7 +554,7 @@
         <scene sceneID="lfB-MP-o4m">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9E6-ad-Ced" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tag" id="ZKn-VK-dDg"/>
+                    <tabBarItem key="tabBarItem" title="Tag" image="Tag" id="ZKn-VK-dDg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PlR-pP-tQY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -567,7 +573,7 @@
         <scene sceneID="7n5-Ks-KPT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ley-vF-Y1Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="2jS-Sv-HYt"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="Map" id="2jS-Sv-HYt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t2W-W9-CJd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -586,7 +592,16 @@
     <inferredMetricsTieBreakers>
         <segue reference="RYM-cr-dEY"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" name="AccentColor"/>
     <resources>
+        <image name="Locations" width="30" height="30"/>
+        <image name="Map" width="30" height="30"/>
+        <image name="Pin" width="24" height="24"/>
+        <image name="Tag" width="30" height="30"/>
+        <image name="User" width="24" height="24"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.93300002813339233" blue="0.53299999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
