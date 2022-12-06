@@ -18,6 +18,7 @@
 		FB16BE66292BFBB6002B3B3F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16BE65292BFBB6002B3B3F /* MapViewController.swift */; };
 		FB16BE6829379572002B3B3F /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16BE6729379572002B3B3F /* UIImage+Resize.swift */; };
 		FB16BE6A2938E1DF002B3B3F /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16BE692938E1DF002B3B3F /* String+AddText.swift */; };
+		FB877FC2293F7BE600C1B516 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = FB877FC1293F7BE600C1B516 /* Sound */; };
 		FBB1312729140E1000D54C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB1312629140E1000D54C03 /* AppDelegate.swift */; };
 		FBB1312929140E1000D54C03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB1312829140E1000D54C03 /* SceneDelegate.swift */; };
 		FBB1312B29140E1000D54C03 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB1312A29140E1000D54C03 /* CurrentLocationViewController.swift */; };
@@ -39,6 +40,7 @@
 		FB16BE65292BFBB6002B3B3F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FB16BE6729379572002B3B3F /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		FB16BE692938E1DF002B3B3F /* String+AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
+		FB877FC1293F7BE600C1B516 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sound; sourceTree = "<group>"; };
 		FBB1312329140E1000D54C03 /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB1312629140E1000D54C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBB1312829140E1000D54C03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				FB16BE6329267498002B3B3F /* LocationCell.swift */,
 				FB16BE6729379572002B3B3F /* UIImage+Resize.swift */,
 				FB16BE692938E1DF002B3B3F /* String+AddText.swift */,
+				FB877FC1293F7BE600C1B516 /* Sound */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				FBB1313629140E1400D54C03 /* LaunchScreen.storyboard in Resources */,
 				FBB1313329140E1400D54C03 /* Assets.xcassets in Resources */,
+				FB877FC2293F7BE600C1B516 /* Sound in Resources */,
 				FBB1312E29140E1000D54C03 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
